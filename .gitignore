@@ -139,4 +139,4 @@ cython_debug/
 *.db
 instance/
 
-cosmocrash-8aace-firebase-adminsdk-fbsvc-9f24c46583.json
+cosmocrash_firebase.json
