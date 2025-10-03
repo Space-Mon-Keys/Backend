@@ -1,0 +1,24 @@
+@echo off
+setlocal
+set VENV_DIR=venv
+set REQUIREMENTS=requirements.txt
+set APP_MODULE=app.main:app
+
+REM Comprobar si existe la carpeta venv
+if not exist %VENV_DIR% (
+    echo [INFO] Creando entorno virtual...
+    python -m venv %VENV_DIR%
+)
+
+REM Activar el entorno virtual
+call %VENV_DIR%\Scripts\activate.bat
+
+REM Instalar dependencias
+echo [INFO] Instalando dependencias...
+pip install --upgrade pip
+pip install -r %REQUIREMENTS%
+
+REM Lanzar la app FastAPI con Uvicorn
+echo [INFO] Lanzando la app...
+uvicorn %APP_MODULE% --reload
+endlocal
