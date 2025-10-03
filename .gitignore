@@ -138,3 +138,5 @@ cython_debug/
 # FastAPI specific
 *.db
 instance/
+
+cosmocrash-8aace-firebase-adminsdk-fbsvc-9f24c46583.json

@@ -19,6 +19,8 @@ pip install --upgrade pip
 pip install -r %REQUIREMENTS%
 
 REM Lanzar la app FastAPI con Uvicorn
+REM Establecer variable de entorno para credenciales de Firebase
+set GOOGLE_APPLICATION_CREDENTIALS=%CD%\cosmocrash-8aace-firebase-adminsdk-fbsvc-9f24c46583.json
 echo [INFO] Lanzando la app...
 uvicorn %APP_MODULE% --reload
 endlocal
